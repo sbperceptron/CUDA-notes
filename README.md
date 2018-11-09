@@ -13,7 +13,7 @@ threadIdx variable
 
 the following code add two vectors a and b of size n and stores the result into a 
 vector c
-!["Add"](https://github.com/sbperceptron/CUDA-notes/blob/master/add.c)
+!["Add_vectors"](https://github.com/sbperceptron/CUDA-notes/blob/master/add.c)
 
 here each of the N threads that excecute VecAdd() performs one pair wise addition
 
@@ -32,7 +32,18 @@ size Dx, Dy , Dz the thread id of a thread of index x,y,z is x+yDx+zDxDy
 for example the code below adds two matricesa A and B of size NXN and stores the 
 result into matrix c
 
+!["Add_ Matrices"](https://github.com/sbperceptron/CUDA-notes/blob/master/addmat.c)
 
+there is a limit to the number of threads per block, since all threads of a block 
+are expected to reside on the same processor core and must share the limited memory
+resources of that core. on current gpus a thread block may contain up to 1024 threads.
+
+however, a kernel can be executed by multiple equally shaped thread blocks, so thaat 
+the total number of threads is equal to the number of threads per block times the number of 
+blocks.
+
+blocks are organized into a one dimensional, two dimensional or three dimensional 
+grid of thread blocks
 
 
 
