@@ -45,5 +45,13 @@ blocks.
 blocks are organized into a one dimensional, two dimensional or three dimensional 
 grid of thread blocks
 
+!["Thread Blocks"](https://github.com/sbperceptron/CUDA-notes/blob/master/grid-of-thread-blocks.png)
+
+each block within the grid can be identified by a one dimensional , two dimensioanl or 
+three dimensional index accessible within the kernek through the built-in blockIdx
+variable. the dimesnion of the thred block is accessible within the kernel through the builtin
+blockDim variable.
+
+
 
 
