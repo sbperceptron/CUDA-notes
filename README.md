@@ -13,19 +13,6 @@ threadIdx variable
 the following code add two vectors a and b of size n and stores the result into a 
 vector c
 
-`// Kernel definition
-__global__ void VecAdd(float* A, float* B, float* C)
-{
-    int i = threadIdx.x;
-    C[i] = A[i] + B[i];
-}
 
-int main()
-{
-    ...
-    // Kernel invocation with N threads
-    VecAdd<<<1, N>>>(A, B, C);
-    ...
-}`
 
 
