@@ -52,6 +52,6 @@ three dimensional index accessible within the kernek through the built-in blockI
 variable. the dimesnion of the thred block is accessible within the kernel through the builtin
 blockDim variable.
 
-
+ 
 
 
