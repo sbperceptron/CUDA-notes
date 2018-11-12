@@ -54,4 +54,14 @@ blockDim variable.
 
  
 
+Given the heterogeneous nature of the cuda programming model, a typical sequence 
+of operations for a cuda c program is
+1. Declare and allocate host and device memory. 
+2. initialize host data.
+3. transfer data from the host to device
+4. excecute one or more kernels.
+5. transfer results from the device to the host.
+
+saxpy single precision a*x plus y 
+it is a good hello world example for parallel computaion
 
